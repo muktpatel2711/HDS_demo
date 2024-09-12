@@ -1,5 +1,7 @@
 import time
 
+import pytest
+
 from pageObjects.loginPage import LoginPage
 from pageObjects.HomePage import HomePage
 from pageObjects.PositionPage import PositionPage
@@ -9,6 +11,7 @@ import os
 class Test_001_LoginSSO:
     baseURl =elements.url
 
+    @pytest.mark.sanity
     def test_sso_login(self,setup):
         self.driver = setup
         self.driver.get(self.baseURl)

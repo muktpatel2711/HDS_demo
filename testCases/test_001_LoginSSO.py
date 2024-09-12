@@ -1,11 +1,13 @@
 import time
 
+import pytest
+
 from pageObjects.loginPage import LoginPage
 from pageObjects.HomePage import HomePage
 from pageObjects.PositionPage import PositionPage
 from utilities import elements
 import os
-
+@pytest.mark.regression
 class Test_001_LoginSSO:
     baseURl =elements.url
 
