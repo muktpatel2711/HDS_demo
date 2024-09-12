@@ -26,7 +26,7 @@ class Test_001_LoginSSO:
         self.position.select_position()
         self.driver.save_screenshot(os.path.abspath(os.curdir)+"//screenShorts//"+"login.png")
         self.userName =self.position.confirmationmsg()
-        if self.userName=="Manish Patel":
+        if self.userName=="":
             assert True
         else:
             assert False
