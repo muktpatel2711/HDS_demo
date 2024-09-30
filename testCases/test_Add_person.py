@@ -1,3 +1,5 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options as ChromeOptions
@@ -23,9 +25,8 @@ class Test_Add_person:
     def test_add_person(self):
         driver =self.login_test.test_login_authorization()
         driver.find_element(By.XPATH,"//span[text()='Manage Person']").click()
+        time.sleep(3)
         driver.find_element(By.XPATH, "//span[text()='Add Person']").click()
-
-
         print("person_add")
         driver.quit()
 
