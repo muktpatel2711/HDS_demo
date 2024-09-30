@@ -29,9 +29,8 @@ class Test_login:
        driver.find_element(By.XPATH,"//button[@class='btn btn-primary btn-submit']").click()
        driver.find_element(By.XPATH,"//button[text()='North America System Admin']").click()
        print("success")
+       return driver
 
 
 
-login = Test_login()
-login.test_login_authorization()
 
