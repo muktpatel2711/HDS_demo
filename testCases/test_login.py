@@ -14,9 +14,6 @@ chrome_options.add_argument("--disable-dev-shm-usage")
 firefox_options = FirefoxOptions()
 firefox_options.add_argument("--headless")
 
-Browser = {
-    "Chrome","Firefox"
-}
 class Test_login:
    def test_login_authorization(self):
        driver =webdriver.Chrome(service=Service(),options=chrome_options)

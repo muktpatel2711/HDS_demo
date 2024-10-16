@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 import pytest
-from test_login import Test_login
+from .test_login import Test_login
 
 chrome_options=ChromeOptions()
 chrome_options.add_argument("--headless")
