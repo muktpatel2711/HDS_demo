@@ -1,4 +1,4 @@
-url = "https://qa.baps.dev/hds"
+url = "https://uat.baps.dev/mis"
 user_name = "hiteshpatel1487"
 password = "Ims@0503"
 
@@ -8,7 +8,7 @@ browser = "chrome"
 
 #Home_Page
 
-login_button_xpath = "//span[text()='Login with BAPS SSO']"
+login_button_name = "submit"
 
 # Login_Page
 username_id = "userName"

@@ -10,7 +10,7 @@ class HomePage():
 
 
     def Login_withSSo(self):
-        self.driver.find_element(By.XPATH,elements.login_button_xpath).click()
+        self.driver.find_element(By.NAME,elements.login_button_name).click()
 
 
 

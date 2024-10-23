@@ -5,8 +5,11 @@ from selenium import webdriver
 
 import pytest
 
+from pageObjects.LoginPage import Loginpage
+from utilities import elements
 
-@pytest.fixture()
+
+@pytest.fixture
 def setup(browser):
     if browser == 'edge':
         driver = webdriver.Edge()
@@ -14,7 +17,25 @@ def setup(browser):
         driver = webdriver.Firefox()
     else:
         driver=webdriver.Chrome()
-    return driver
+    driver.implicitly_wait(10)  # Optional: set implicit wait
+    yield driver  # Yield the driver for tests
+    driver.quit()
+
+@pytest.fixture()
+def login(setup):
+    driver =setup
+    baseURL =elements.url
+    driver.get(baseURL)
+    driver.maximize_window()
+
+    login_page = Loginpage(driver)
+    login_page.EnterUserName()
+    login_page.EnterPassword()
+    login_page.submit()
+
+    yield driver
+
+
 
 def pytest_addoption(parser):
     parser.addoption("--browser")

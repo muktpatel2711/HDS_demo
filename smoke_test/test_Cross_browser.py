@@ -21,12 +21,12 @@ class Test_Browser:
         for browser in Browser:
             if browser=="Chrome":
                 driver = webdriver.Chrome(service=Service(),options=chrome_options)
-                driver.get("https://uat.baps.dev/mis/")
+                driver.get("https://mis.na.baps.org/")
                 print(f"An Application works on {browser}")
                 driver.close()
             elif browser=="Firefox":
                 driver =webdriver.Firefox(service=FirefoxService(),options=firefox_options)
-                driver.get("https://qa.baps.dev/mis/")
+                driver.get("https://mis.na.baps.org/")
                 print(f"An Application works on {browser}")
                 driver.close()
 browser =Test_Browser()

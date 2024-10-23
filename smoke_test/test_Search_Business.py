@@ -1,14 +1,9 @@
 import time
 
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options as ChromeOptions
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
-import pytest
-from .test_login import Test_login
+from smoke_test.test_login import Test_login
 
 chrome_options=ChromeOptions()
 chrome_options.add_argument("--headless")
